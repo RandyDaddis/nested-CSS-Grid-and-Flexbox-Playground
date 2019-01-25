@@ -14,10 +14,6 @@ Pull Requests are welcome!!!
 
 # References:
 
-[A Complete Guide to Grid]( https://css-tricks.com/snippets/css/complete-guide-grid/)
-
-[A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-
-[US browser support for CSS Grid Layout]( https://caniuse.com/#search=css%20grid)
+[References](https://github.com/RandyDaddis/nested-CSS-Grid-and-Flexbox-Playground/wiki/References)
 
 [W3C References](https://github.com/RandyDaddis/nested-CSS-Grid-and-Flexbox-Playground/wiki/W3C-Specifications)
