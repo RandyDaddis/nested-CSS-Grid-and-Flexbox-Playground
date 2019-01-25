@@ -3,9 +3,11 @@
 
 >**Note:** One of the limitations with CSS Grid Layout Module Level 1 is that Grid items must be direct children of the grid container. 
 
+Pull Requests are welcome!!!
+
 >**Note:** The optimal solution for this scenario may be to utilize the CSS Grid ‘subgrid’, which is a feature is the main addition to [CSS Grid Layout Module Level 2]. Unfortunately, it is at the Working Draft stage at this time. ( https://drafts.csswg.org/css-grid-2/#valdef-display-subgrid)
 
->**Note:** Pull Requests are welcome!!!
+
 
 # References:
 
