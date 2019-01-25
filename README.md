@@ -4,7 +4,7 @@
 
 <p>This repo contains an Angular application which includes multiple layouts using different combinations of CSS Grid and Flexbox.</p>
 
-<p>The products and payments columns of the first 2 layouts currently do wrap on small viewports. However, their parent container does not currently wrap on a small viewport. Also, the product and payment item details columnn widths need attention.</p>
+<p>The products and payments columns of the first 2 layouts currently do wrap on small viewports. However, their parent container does not currently wrap on a small viewport. Also, the product and payment item detail column widths need attention.</p>
 
 <p>In light of those issues, it does respond fairly well on a small viewport. This is a work-in-progress that I will update as I find the time to do so. </p>
 
