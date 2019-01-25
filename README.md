@@ -20,17 +20,4 @@ Pull Requests are welcome!!!
 
 [US browser support for CSS Grid Layout]( https://caniuse.com/#search=css%20grid)
 
-# W3C References:
-
-[current W3C CSS Specifications](https://www.w3.org/Style/CSS/current-work)
-
-[candidate recommendation - CSS Grid Layout Module Level 1](https://www.w3.org/TR/css-grid-1/)
-
-[candidate recommendation - CSS Flexible Box Layout Module Level 1]( https://www.w3.org/TR/css-flexbox-1/)
-
-[candidate recommendation – CSS Fragmentation Module Level 3](https://www.w3.org/TR/css-break-3/)
-
-# W3C Specifications to watch:
-
-[working draft - CSS Multi-Column Layout Module Level 1]( https://www.w3.org/TR/css-multicol-1/)
-
+[W3C References](https://github.com/RandyDaddis/nested-CSS-Grid-and-Flexbox-Playground/wiki/W3C-Specifications)
