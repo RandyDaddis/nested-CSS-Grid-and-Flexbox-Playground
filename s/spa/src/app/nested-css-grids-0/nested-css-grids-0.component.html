@@ -1,0 +1,33 @@
+  <div class="container">
+    <div class="header">
+      <h1>Customers List</h1>
+    </div>
+    <ul class="list">
+      <li class="list-header">
+        <div>Customer</div>
+        <div>Products</div>
+        <div>Payments</div>
+      </li>
+      <li class="customer-column" *ngFor="let customer of customers">
+        <div class="customer-row">
+          {{ customer.name }}
+        </div>
+        <ul class="products-column">
+          <li class="product-row" *ngFor="let product of customer.products">
+            <span>{{ product.name}}</span>
+            <span>{{ product.quantity}}</span>
+            <span>{{ product.price}}</span>
+          </li>
+        </ul>
+        <ul class="payments-column">
+          <li class="payment-row" *ngFor="let payment of customer.payments">
+            <span>{{ payment.date}}</span>
+            <span>{{ payment.amount}}</span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="pagination">
+      <p>Pagination Placeholder</p>
+    </div>
+  </div>

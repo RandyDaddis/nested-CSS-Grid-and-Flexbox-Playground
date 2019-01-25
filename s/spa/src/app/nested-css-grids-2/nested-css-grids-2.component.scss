@@ -1,0 +1,107 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  padding: .5rem;
+  background-color: yellow;
+  align-self: center;
+}
+
+.customer-list {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.customer-list-header {
+  background-color: aquamarine;
+  padding: .5rem;
+  display: grid;
+  grid-template-rows: max-content;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.customer-list-content {
+  background-color: orangered;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, max-content);
+  grid-template-columns: repeat(3, 1fr);
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.customer-column {
+  grid-column: 1 / 2;
+}
+
+.customer-column-description {
+  text-align: center;
+}
+
+.invoices-column {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, max-content);
+  grid-template-columns: max-content repeat(2, minmax(1fr, max-content));
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.invoices-id-column {
+  padding: .25rem 1rem;
+  grid-column: 1 / 2;
+}
+.invoices-quantity-column {
+  padding: .25rem 1rem;
+  grid-column: 2 / 3;
+}
+.invoices-amount-column {
+  padding: .25rem 1rem;
+  grid-column: 3 / 4;
+}
+
+.payments-column {
+  grid-column: 3 /4;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, max-content);
+  grid-template-columns: repeat(2,minmax(10px, max-content));
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.payments-date-column {
+  padding: .25rem 1rem;
+  grid-column: 1 / 2;
+}
+.payments-amount-column {
+  padding: .25rem 1rem;
+  grid-column: 2 / 3;
+}
+
+.pagination {
+  padding: .5rem;
+  background-color: yellow;
+  align-self: center;
+}
+
+.border {
+  border: 1px solid;
+}
+.border-right {
+  border-right: 1px solid;
+}
