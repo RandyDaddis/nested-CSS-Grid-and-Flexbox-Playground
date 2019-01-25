@@ -4,20 +4,20 @@
   </div>
   <div class="customer-list">
     <div class="customer-column-header">Customer</div>
-    <div class="products-column-header">Items</div>
+    <div class="products-column-header">Products</div>
     <div class="payments-column-header">Payments</div>
     <div class="customer-list-item" *ngFor="let customer of customers">
       <div class="customer-column">
         {{ customer.name }}
       </div>
-      <ul class="products-list">
+      <ul class="products-column">
         <li class="product-row" *ngFor="let product of customer.products">
           <span>{{ product.name }}</span>
           <span>{{ product.quantity }}</span>
           <span>{{ product.price }}</span>
         </li>
       </ul>
-      <ul class="payments-list">
+      <ul class="payments-column">
         <li class="payment-row" *ngFor="let payment of customer.payments">
           <span>{{ payment.date }}</span>
           <span>{{ payment.amount }}</span>
