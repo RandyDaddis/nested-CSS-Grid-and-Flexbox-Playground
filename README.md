@@ -8,7 +8,7 @@
 
 <p>In light of those issues, it does respond fairly well on a small viewport. This is a work-in-progress that I will update as I find the time to do so. </p>
 
-<p>I have also created a [CodePen.io pen which utilizes static data](https://codepen.io/randydaddis/pen/LqEjEg). I will update this example to make it responsive once I have completed the Github example.</p>
+<p>I have also created a [CodePen.io pen which utilizes static data](https://codepen.io/randydaddis/pen/LqEjEg). I will update that layout as well as the 3rd layout in this GitHub repo to make them responsive once I have completed layouts #1 & #2 in this Github repo.</p>
 
 >**Note:** One of the limitations with CSS Grid Layout Module Level 1 is that Grid items must be direct children of the grid container. 
 
