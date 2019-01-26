@@ -2,26 +2,26 @@
   <div class="header">
     <h1>Customers List</h1>
   </div>
-  <div class='customer-list'>
-    <div class='customer-list-header'>
+  <div class='list'>
+    <div class='list-header'>
       <div class='customer-column'>
         <div>Customer</div>
       </div>
-      <div class='invoices-column'>
+      <div class='invoice-column'>
         <div>Invoices</div>
       </div>
       <div class='payments-column'>
         <div>Payments</div>
       </div>
     </div>
-    <div class='customer-list-content' *ngFor="let customer of customers">
+    <div class='list-content' *ngFor="let customer of customers">
       <div class='customer-column border'>
         <div class='customer-column-description'>{{ customer.name }}</div>
       </div>
-      <div class='invoices-column border' *ngFor="let product of customer.products">
-        <div class='invoices-id-column'>{{ product.name }}</div>
-        <div class='invoices-quantity-column'>{{ product.quantity }}</div>
-        <div class='invoices-amount-column'>{{ product.price }}</div>
+      <div class='invoice-column border' *ngFor="let invoice of customer.invoices">
+        <div class='invoice-id-column'>{{ invoice.name }}</div>
+        <div class='invoice-quantity-column'>{{ invoice.quantity }}</div>
+        <div class='invoice-amount-column'>{{ invoice.price }}</div>
       </div>
       <div class='payments-column border' *ngFor="let payment of customer.payments">
         <div class='payments-date-column'>{{ payment.date }}</div>

@@ -5,18 +5,18 @@
     <ul class="list">
       <li class="list-header">
         <div>Customer</div>
-        <div>Products</div>
+        <div>Invoices</div>
         <div>Payments</div>
       </li>
       <li class="customer-column" *ngFor="let customer of customers">
         <div class="customer-row">
           {{ customer.name }}
         </div>
-        <ul class="products-column">
-          <li class="product-row" *ngFor="let product of customer.products">
-            <span>{{ product.name}}</span>
-            <span>{{ product.quantity}}</span>
-            <span>{{ product.price}}</span>
+        <ul class="invoice-column">
+          <li class="invoice-row" *ngFor="let invoice of customer.invoices">
+            <span>{{ invoice.name}}</span>
+            <span>{{ invoice.quantity}}</span>
+            <span>{{ invoice.price}}</span>
           </li>
         </ul>
         <ul class="payments-column">

@@ -2,19 +2,19 @@
   <div class="header">
     <h1>Customers List</h1>
   </div>
-  <div class="customer-list">
+  <div class="list">
     <div class="customer-column-header">Customer</div>
-    <div class="products-column-header">Products</div>
+    <div class="invoice-column-header">Invoices</div>
     <div class="payments-column-header">Payments</div>
     <div class="customer-list-item" *ngFor="let customer of customers">
       <div class="customer-column">
         {{ customer.name }}
       </div>
-      <ul class="products-column">
-        <li class="product-row" *ngFor="let product of customer.products">
-          <span>{{ product.name }}</span>
-          <span>{{ product.quantity }}</span>
-          <span>{{ product.price }}</span>
+      <ul class="invoice-column">
+        <li class="invoice-row" *ngFor="let invoice of customer.invoices">
+          <div>{{ invoice.name }}</div>
+          <div>{{ invoice.quantity }}</div>
+          <div>{{ invoice.price }}</div>
         </li>
       </ul>
       <ul class="payments-column">

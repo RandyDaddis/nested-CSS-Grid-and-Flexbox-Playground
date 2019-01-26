@@ -1,9 +1,9 @@
-import { Product } from './product';
+import { Invoice } from './invoice';
 import { Payment } from './payment';
 
 export interface Customer {
   id: number;
   name: string;
-  products: Product[];
+  invoices: Invoice[];
   payments: Payment[];
 }
