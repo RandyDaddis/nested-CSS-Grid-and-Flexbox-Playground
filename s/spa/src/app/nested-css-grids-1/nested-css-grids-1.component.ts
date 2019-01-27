@@ -10,11 +10,12 @@ import { Customer } from '../_models/customer';
 })
 export class NestedCssGrids1Component implements OnInit {
   customers: Customer[];
+  listHeader = ['Customer', 'Invoices', 'Payments'];
 
   constructor(private customerService: CustomerService) { }
 
   ngOnInit() {
     this.customers = this.customerService.getCustomers();
   }
-
 }
+

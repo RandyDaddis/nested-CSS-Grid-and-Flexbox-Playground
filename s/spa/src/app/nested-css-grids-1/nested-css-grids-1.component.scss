@@ -3,6 +3,7 @@ $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; // 800px;
 $bp-small: 37.5em; // 600px;
+$bp-xsmall: 480px;
 
 *, *::before, *::after {
   margin: 0;
@@ -11,14 +12,10 @@ $bp-small: 37.5em; // 600px;
 }
 ul {
   list-style-type: none;
-
-  li {
-    margin: 0;
-  }
 }
 
 .container {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   background-color: lightgray;
   display: flex;
@@ -38,11 +35,26 @@ ul {
   grid-template-columns: repeat(3, minmax(min-content, 1fr));
   grid-gap: .25rem;
 
+  .customer-column-header {
+    grid-column: 1 / 2;
+  }
+  .invoice-column-header {
+    grid-column: 2 / 3;
+  }
+  .payments-column-header {
+    grid-column: 3 / 4;
+  }
+
   @media only screen and (max-width: $bp-small) {
     grid-template-columns: repeat(autofit, 100%);
+
+    .customer-column-header,
+    .invoice-column-header,
+    .payments-column-header {
+      grid-column: 1 / -1;
+    }
   }
 }
-
 
 .customer-column-header,
 .invoice-column-header,
@@ -51,39 +63,51 @@ ul {
   text-align: center;
 }
 
-.customer-column-header {
-  grid-column: 1 / 2;
-}
-.invoice-column-header {
-  grid-column: 2 / 3;
-}
-.payments-column-header {
-  grid-column: 3 / 4;
-}
-
-.customer-list-item {
+.customer-row {
   padding: .5rem;
   background-color: orangered;
   grid-column: 1 / -1;
   display: grid;
-  /*grid-template-rows: 1fr;*/
   grid-template-columns: repeat(3, minmax(min-content, 1fr));
   grid-gap: .5rem;
   align-items: center;
+  justify-content: center;
+  justify-items: center;
+
+  .customer-column {
+    grid-column: 1 / 2;
+  }
+
+  .invoice-column {
+    grid-column: 2 / 3;
+  }
+
+  .payment-column {
+    grid-column: 3 / 4;
+  }
 
   @media only screen and (max-width: $bp-small) {
     grid-template-columns: repeat(autofit, 100%);
+    justify-content: center;
+
+    .customer-column,
+    .invoice-column,
+    .payments-column {
+      grid-column: 1 / -1;
+    }
   }
 }
 
 .customer-column {
-  grid-column: 1 / 2;
   justify-self: right;
+
+  @media only screen and (max-width: $bp-small) {
+    justify-self: center;
+  }
 }
 
 .invoice-column {
   border: 1px solid;
-  grid-column: 2 / 3;
 
   .invoice-row-header {
     background-color: darkcyan;
@@ -123,10 +147,11 @@ ul {
 
 .payment-column {
   border: 1px solid;
-  grid-column: 3 / 4;
+  justify-content: center;
+  justify-items: center;
 
   .payment-row-header {
-    background-color:darkcyan;
+    background-color: darkcyan;
     border-bottom: 1px solid;
     display: grid;
     grid-template-columns: repeat(2, minmax(6rem, 1fr));

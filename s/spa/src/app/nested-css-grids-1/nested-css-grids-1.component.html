@@ -3,10 +3,10 @@
     <h1>Customers List</h1>
   </div>
   <div class="list">
-    <div class="customer-column-header">Customer</div>
-    <div class="invoice-column-header">Invoices</div>
-    <div class="payments-column-header">Payments</div>
-    <div class="customer-list-item" *ngFor="let customer of customers">
+    <div class="customer-column-header">{{ listHeader[0] }}</div>
+    <div class="invoice-column-header">{{ listHeader[1] }}</div>
+    <div class="payments-column-header">{{ listHeader[2] }}</div>
+    <div class="customer-row" *ngFor="let customer of customers">
       <div class="customer-column">
         {{ customer.name }}
       </div>
@@ -31,7 +31,7 @@
           <span>{{ payment.amount }}</span>
         </li>
       </ul>
-  </div>
+    </div>
   </div>
   <div class="pagination">
     <p>Pagination Placeholder</p>
