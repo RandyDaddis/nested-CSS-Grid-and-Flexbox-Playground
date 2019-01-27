@@ -64,13 +64,11 @@ ul {
 }
 
 .customer-row {
-  padding: .5rem;
   background-color: orangered;
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(3, minmax(min-content, 1fr));
-  grid-gap: .5rem;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   justify-items: center;
 
@@ -99,6 +97,7 @@ ul {
 }
 
 .customer-column {
+  align-self: center;
   justify-self: right;
 
   @media only screen and (max-width: $bp-small) {
@@ -107,6 +106,9 @@ ul {
 }
 
 .invoice-column {
+  background-color: yellow;
+  align-content: stretch;
+  align-items: stretch;
   border: 1px solid;
 
   .invoice-row-header {
@@ -128,7 +130,10 @@ ul {
   .invoice-row {
     background-color: cyan;
     display: grid;
+    grid-template-rows: 1fr;
     grid-template-columns: repeat(3, minmax(6rem, 1fr));
+    align-content: stretch;
+    align-items: stretch;
     justify-items: flex-end;
 
     span {
@@ -147,6 +152,9 @@ ul {
 
 .payment-column {
   border: 1px solid;
+  background-color: yellow;
+  align-content: stretch;
+  align-items: stretch;
   justify-content: center;
   justify-items: center;
 
@@ -169,6 +177,7 @@ ul {
   .payment-row {
     background-color: cyan;
     display: grid;
+    grid-template-rows: 1fr;
     grid-template-columns: repeat(2, minmax(6rem, 1fr));
     justify-items: flex-end;
 
