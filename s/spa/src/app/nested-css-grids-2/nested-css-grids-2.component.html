@@ -19,7 +19,7 @@
         <div class='customer-column-description'>{{ customer.name }}</div>
       </div>
       <div class='invoice-column border' *ngFor="let invoice of customer.invoices">
-        <div class='invoice-id-column'>{{ invoice.name }}</div>
+        <div class='invoice-description-column'>{{ invoice.description }}</div>
         <div class='invoice-quantity-column'>{{ invoice.quantity }}</div>
         <div class='invoice-amount-column'>{{ invoice.price }}</div>
       </div>

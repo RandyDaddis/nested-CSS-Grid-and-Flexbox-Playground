@@ -10,19 +10,19 @@ import { Payment } from '../_models/payment';
 
 export class CustomerService {
     payments: Payment[] = [
-      { id: 21, amount: 100.00, date: new Date('January 21, 2019').toLocaleDateString() },
-      { id: 22, amount: 2000.00, date: new Date('December 21, 2018').toLocaleDateString() },
-      { id: 23, amount: 30000.00, date: new Date('November 21, 2019').toLocaleDateString() },
-      { id: 24, amount: 4000000, date: new Date('October 21, 2018').toLocaleDateString() }
+      { amount: 100.00, date: new Date('January 21, 2019').toLocaleDateString() },
+      { amount: 2000.00, date: new Date('December 21, 2018').toLocaleDateString() },
+      { amount: 30000.00, date: new Date('November 21, 2019').toLocaleDateString() },
+      { amount: 4000000, date: new Date('October 21, 2018').toLocaleDateString() }
     ];
     invoices: Invoice[] = [
-      { id: 11, name: "Item 11", quantity: 5, price: 4.00 },
-      { id: 12, name: "Item 123", quantity: 100, price: 200.00 },
-      { id: 13, name: "Item 134", quantity: 20000, price: 50000 }
+      { description: "Item 11", quantity: 5, price: 4.00 },
+      { description: "Item 123", quantity: 100, price: 200.00 },
+      { description: "Item 134", quantity: 20000, price: 50000 }
     ];
     customers: Customer[] = [
-      { id: 1, name: "Acme Widget Manufacturing, Inc.", invoices: this.invoices, payments: this.payments },
-      { id: 2, name: "Brandy Wines, LLC", invoices: this.invoices, payments: this.payments }
+      { name: "Acme Widget Manufacturing, Inc.", invoices: this.invoices, payments: this.payments },
+      { name: "Brandy Wines, LLC", invoices: this.invoices, payments: this.payments }
     ];
 
   getCustomers() {

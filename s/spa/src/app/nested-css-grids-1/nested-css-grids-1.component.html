@@ -11,13 +11,21 @@
         {{ customer.name }}
       </div>
       <ul class="invoice-column">
+        <li class="invoice-row-header">
+          <span>Description</span>
+          <span>Quantity</span>
+          <span>Price</span>
+        </li>
         <li class="invoice-row" *ngFor="let invoice of customer.invoices">
-          <div>{{ invoice.name }}</div>
-          <div>{{ invoice.quantity }}</div>
-          <div>{{ invoice.price }}</div>
+          <span>{{ invoice.description }}</span>
+          <span>{{ invoice.quantity }}</span>
+          <span>{{ invoice.price }}</span>
         </li>
       </ul>
-      <ul class="payments-column">
+      <ul class="payment-column">
+        <li class="payment-row-header">
+          <span>Date</span><span>Amount</span>
+        </li>
         <li class="payment-row" *ngFor="let payment of customer.payments">
           <span>{{ payment.date }}</span>
           <span>{{ payment.amount }}</span>
