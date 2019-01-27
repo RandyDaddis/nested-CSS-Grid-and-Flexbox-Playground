@@ -1,4 +1,4 @@
-*, *::before, *::after {
+/**, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
@@ -56,22 +56,27 @@
   grid-column: 2 / 3;
   display: grid;
   grid-template-rows: repeat(auto-fill, max-content);
-  grid-template-columns: max-content repeat(2, minmax(1fr, max-content));
+  grid-template-columns: 1fr repeat(2, minmax(1fr, max-content));
   align-content: flex-start;
-  align-items: flex-start;
-  justify-content: space-around;
+  align-items:stretch;
+  text-align: right;
 }
 
-.invoice-id-column {
+.invoice-id-column,
+.invoice-quantity-column,
+.invoice-amount-column {
   padding: .25rem 1rem;
+}
+
+.invoice-description-column {
+  border-right: 1px solid;
   grid-column: 1 / 2;
 }
 .invoice-quantity-column {
-  padding: .25rem 1rem;
+  border-right: 1px solid;
   grid-column: 2 / 3;
 }
 .invoice-amount-column {
-  padding: .25rem 1rem;
   grid-column: 3 / 4;
 }
 
@@ -79,18 +84,22 @@
   grid-column: 3 /4;
   display: grid;
   grid-template-rows: repeat(auto-fill, max-content);
-  grid-template-columns: repeat(2,minmax(10px, max-content));
+  grid-template-columns: repeat(2,minmax(1fr, max-content));
   align-content: flex-start;
   align-items: flex-start;
   justify-content: space-around;
 }
 
-.payments-date-column {
+.payments-date-column,
+.payments-amount-column {
   padding: .25rem 1rem;
+}
+
+.payments-date-column {
+  border-right: 1px solid;
   grid-column: 1 / 2;
 }
 .payments-amount-column {
-  padding: .25rem 1rem;
   grid-column: 2 / 3;
 }
 
@@ -105,4 +114,4 @@
 }
 .border-right {
   border-right: 1px solid;
-}
+}*/
