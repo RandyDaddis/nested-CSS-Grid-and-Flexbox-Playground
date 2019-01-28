@@ -8,27 +8,30 @@
     <div class="payments-column-header">{{ listHeader[2] }}</div>
     <div class="customer-row" *ngFor="let customer of customers">
       <div class="customer-column">
-        {{ customer.name }}
+        <div>
+          {{ customer.name }}
+        </div>
       </div>
       <ul class="invoice-column">
         <li class="invoice-row-header">
-          <span>Description</span>
-          <span>Quantity</span>
-          <span>Price</span>
+          <div>Description</div>
+          <div>Quantity</div>
+          <div>Price</div>
         </li>
         <li class="invoice-row" *ngFor="let invoice of customer.invoices">
-          <span>{{ invoice.description }}</span>
-          <span>{{ invoice.quantity }}</span>
-          <span>{{ invoice.price }}</span>
+          <div>{{ invoice.description }}</div>
+          <div>{{ invoice.quantity }}</div>
+          <div>{{ invoice.price }}</div>
         </li>
       </ul>
       <ul class="payment-column">
         <li class="payment-row-header">
-          <span>Date</span><span>Amount</span>
+          <div>Date</div>
+          <div>Amount</div>
         </li>
         <li class="payment-row" *ngFor="let payment of customer.payments">
-          <span>{{ payment.date }}</span>
-          <span>{{ payment.amount }}</span>
+          <div>{{ payment.date }}</div>
+          <div>{{ payment.amount }}</div>
         </li>
       </ul>
     </div>
